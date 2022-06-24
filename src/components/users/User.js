@@ -5,8 +5,9 @@ import PropTypes from 'prop-types'
 
 import Repos from '../repos/Repos'
 
-const User = ({ user, triggerGetUser, triggerGetUserRepos, loading, repos, match }) => {
-
+const User = ({
+	user, triggerGetUser, triggerGetUserRepos, loading, repos, match
+}) => {
 	useEffect(() => {
 		triggerGetUser(match.params.login)
 		triggerGetUserRepos(match.params.login)
@@ -81,28 +82,30 @@ const User = ({ user, triggerGetUser, triggerGetUserRepos, loading, repos, match
 						<li>
 							{
 								login &&
-								<Fragment>
-										<span className='profile-label'>Username: </span>  {login}
-								</Fragment>
+									<Fragment>
+										<span className='profile-label'>Username: </span>
+										{login}
+									</Fragment>
 							}
 						</li>
 						<li>
 							{
 								company &&
-								<Fragment>
-										<span className='profile-label'>Company: </span>  {company}
-								</Fragment>
+									<Fragment>
+										<span className='profile-label'>Company: </span>
+										{company}
+									</Fragment>
 							}
 						</li>
 						<li>
 							{
 								blog &&
-								<Fragment>
+									<Fragment>
 										<span className='profile-label'>Website: </span>  
 										<a href={blog} target='_blank' rel="noreferrer">
 											{blog}
 										</a>
-								</Fragment>
+									</Fragment>
 							}
 						</li>
 					</ul>
