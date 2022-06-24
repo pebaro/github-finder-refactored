@@ -83,8 +83,9 @@ const User = ({
 							{
 								login &&
 									<Fragment>
-										<span className='profile-label'>Username: </span>
-										{login}
+										<span className='profile-label'>
+											Username:
+										</span> {login}
 									</Fragment>
 							}
 						</li>
@@ -92,8 +93,9 @@ const User = ({
 							{
 								company &&
 									<Fragment>
-										<span className='profile-label'>Company: </span>
-										{company}
+										<span className='profile-label'>
+											Company:
+										</span> {company}
 									</Fragment>
 							}
 						</li>
@@ -101,10 +103,13 @@ const User = ({
 							{
 								blog &&
 									<Fragment>
-										<span className='profile-label'>Website: </span>  
-										<a href={blog} target='_blank' rel="noreferrer">
-											{blog}
-										</a>
+										<span className='profile-label'>
+											Website:
+										</span>  <a
+											href={blog}
+											target='_blank'
+											rel="noreferrer"
+										>{blog}</a>
 									</Fragment>
 							}
 						</li>
