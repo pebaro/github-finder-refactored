@@ -39,11 +39,6 @@ const User = ({
 			>
 				Back To Search
 			</Link>
-			{
-				hireable
-					? <span className='hireable'>Hireable: <i className="fas fa-check text-sucess" /></span>
-					: <span className='hireable'>Hireable: <i className="fas fa-times-circle text-danger" /></span>
-			}
 			<div className="card grid-2">
 				<div className="all-center">
 					<img
@@ -81,36 +76,36 @@ const User = ({
 					<ul>
 						<li>
 							{
+								hireable
+									? <span className='profile-label'>Hireable: <i className="fas fa-check text-sucess" /></span>
+									: <span className='profile-label'>Hireable: <i className="fas fa-times-circle text-danger" /></span>
+							}
+						</li>
+						<li>
+							{
 								login &&
-									<Fragment>
-										<span className='profile-label'>
-											Username:
-										</span> {login}
-									</Fragment>
+								<Fragment>
+										<span className='profile-label'>Username: </span>  {login}
+								</Fragment>
 							}
 						</li>
 						<li>
 							{
 								company &&
-									<Fragment>
-										<span className='profile-label'>
-											Company:
-										</span> {company}
-									</Fragment>
+								<Fragment>
+										<span className='profile-label'>Company: </span>  {company}
+								</Fragment>
 							}
 						</li>
 						<li>
 							{
 								blog &&
-									<Fragment>
-										<span className='profile-label'>
-											Website:
-										</span>  <a
-											href={blog}
-											target='_blank'
-											rel="noreferrer"
-										>{blog}</a>
-									</Fragment>
+								<Fragment>
+										<span className='profile-label'>Website: </span>  
+										<a href={blog} target='_blank' rel="noreferrer">
+											{blog}
+										</a>
+								</Fragment>
 							}
 						</li>
 					</ul>
