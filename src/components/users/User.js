@@ -77,7 +77,7 @@ const User = ({
 						<li>
 							{
 								hireable
-									? <span className='profile-label'>Hireable: <i className="fas fa-check text-sucess" /></span>
+									? <span className='profile-label'>Hireable: <i className="fas fa-check text-sucess hireable"/></span>
 									: <span className='profile-label'>Hireable: <i className="fas fa-times-circle text-danger" /></span>
 							}
 						</li>
